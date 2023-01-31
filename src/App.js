@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import * as XLSX from 'xlsx';
+import {CSVLink} from 'react-csv'
+import PartNumber from './components/singlePartsComponents/osanumero'
+import ETCSV from './components/ExcelToCSV/ExcelToCSV';
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='container' >
+
+      <div  id='header'>
+        <h1>Parts Store CSV</h1>
+      </div>
+
+      <ETCSV/>
+
+      <hr/>
+
+      <PartNumber/>
+      
+
     </div>
   );
 }
